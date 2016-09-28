@@ -25,4 +25,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | Vegas Volunteer"
   end
 
+  test "should get jobs" do 
+    get jobs_path
+    assert_response :success
+    assert_select "title", "Jobs | Vegas Volunteer"
+  end
 end

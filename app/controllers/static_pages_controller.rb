@@ -1,8 +1,9 @@
 class StaticPagesController < ApplicationController
  
   def home
-    @listing = current_user.listings.build if logged_in?
+      @listing = current_user.listings.build if logged_in?
   end
+
 
   def help
   end
@@ -11,5 +12,8 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def jobs
   end
 end

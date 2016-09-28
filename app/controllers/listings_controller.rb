@@ -11,6 +11,10 @@ class ListingsController < ApplicationController
     end
   end
 
+  def index
+    @listings = Listing.paginate(page: params[:page])
+  end
+
   def destroy
   end
 

@@ -77,6 +77,16 @@ p {
   }
 }
 
+#loginlink {
+  text-align: center;
+  text-color: black;
+  font-size: 1.5em;
+  &:hover {
+    color: gray;
+    text-decoration: none;
+  }
+}
+
 /* footer */
 
 footer {
@@ -242,5 +252,17 @@ span.picture {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+/* Listings index*/
+
+.listings {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px;
+    border-bottom: 1px solid $gray-lighter;
   }
 }
