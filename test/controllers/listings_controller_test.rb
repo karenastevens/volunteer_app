@@ -19,4 +19,13 @@ class ListingsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to login_url
   end
+
+  test "should redirect destroy for wrong listing" do 
+    log_in_as(users(:michael))
+    listing = listings(:ants)
+    assert_no_difference 'Listing.count' do 
+      delete listing_path(listing)
+    end
+    assert_redirected_to root_url
+  end
 end
