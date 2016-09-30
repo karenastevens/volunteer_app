@@ -16,9 +16,10 @@ class ListingsInterfaceTest < ActionDispatch::IntegrationTest
     end 
     assert_select 'div#error_explanation'
     # Valid submission
+    title = "Hello"
     content = "This listing really ties the room together"
     assert_difference 'Listing.count', 1 do 
-      post listings_path, params: { listing: { content: content } }
+      post listings_path, params: { listing: { title: title, content: content } }
     end
     assert_redirected_to root_url
     follow_redirect!

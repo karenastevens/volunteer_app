@@ -26,7 +26,7 @@ class ListingsController < ApplicationController
   private
 
     def listing_params
-      params.require(:listing).permit(:content, :picture)
+      params.require(:listing).permit(:title, :content, :picture)
     end
 
     def correct_user

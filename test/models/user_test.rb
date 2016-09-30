@@ -72,7 +72,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "associated listings should be destroyed" do 
     @user.save
-    @user.listings.create!(content: "Lorem ipsum")
+    @user.listings.create!(title: "Lorem ipsum", content: "Lorem ipsum")
     assert_difference 'Listing.count', -1 do 
       @user.destroy
     end

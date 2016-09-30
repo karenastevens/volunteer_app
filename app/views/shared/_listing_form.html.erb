@@ -1,5 +1,10 @@
 <%= form_for(@listing, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+  <h4>Title</h4>
+  <div class="field">
+    <%= f.text_area :title, placeholder: "Title..." %>
+  </div>
+  <h4>Description</h4>
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new listing..." %>
   </div>

@@ -1,6 +1,9 @@
 <li id="<%= listing.id %>">
   <%= link_to gravatar_for(listing.user, size: 50), listing.user %>
   <span class="user"><%= link_to listing.user.name, listing.user %></span>
+  <span class="title">
+    <%= listing.title %>
+  </span>
   <span class="content">
     <%= listing.content %>
   </span>

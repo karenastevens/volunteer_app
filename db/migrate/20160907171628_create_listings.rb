@@ -1,6 +1,7 @@
 class CreateListings < ActiveRecord::Migration[5.0]
   def change
     create_table :listings do |t|
+      t.text :title
       t.text :content
       t.references :user, foreign_key: true
 

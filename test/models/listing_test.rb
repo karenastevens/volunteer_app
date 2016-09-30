@@ -4,7 +4,7 @@ class ListingTest < ActiveSupport::TestCase
   
   def setup
     @user = users(:michael)
-    @listing = @user.listings.build(content: "Lorem ipsum")
+    @listing = @user.listings.build(title: "Lorem ipsum", content: "Lorem ipsum")
   end
 
   test "should be valid" do 
@@ -13,6 +13,16 @@ class ListingTest < ActiveSupport::TestCase
 
   test "user id should be present" do 
     @listing.user_id = nil 
+    assert_not @listing.valid?
+  end
+
+  test "title should be present" do 
+    @listing.title = nil
+    assert_not @listing.valid?
+  end
+
+  test "title should be at most 140 characters" do
+    @listing.title = "a" * 141
     assert_not @listing.valid?
   end
 
