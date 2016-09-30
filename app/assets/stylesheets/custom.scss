@@ -15,6 +15,18 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background: url(/assets/home_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }
 
 section {
@@ -68,13 +80,13 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: black;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: gray;
     text-decoration: none;
   }
 }
@@ -87,6 +99,25 @@ p {
     color: gray;
     text-decoration: none;
   }
+}
+
+.navbar-default {
+  background-color: #dbf1f9;
+}
+
+.nav .navbar-nav .navbar-right {
+  text-color: black;
+}
+
+.jumbotron {
+  background: url(/assets/background.jpg);
+   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-container {
+  background: url(/assets/background.jpg)
 }
 
 /* footer */
