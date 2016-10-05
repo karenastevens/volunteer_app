@@ -15,7 +15,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
-  background: image-url("home_background.png");
+  background: url("/assets/home_background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -110,8 +110,10 @@ p {
 }
 
 .jumbotron {
-  background: image-url("background.png");
-   background-repeat: no-repeat;
+  background: #000 url("/assets/background.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
