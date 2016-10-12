@@ -24,7 +24,7 @@ Rails.application.configure do
 
   
   config.serve_static_assets = true
-  config.assets.compile = true
+  #config.assets.compile = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
