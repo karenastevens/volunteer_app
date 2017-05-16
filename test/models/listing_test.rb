@@ -16,10 +16,10 @@ class ListingTest < ActiveSupport::TestCase
     assert_not @listing.valid?
   end
 
-  test "title should be present" do 
-    @listing.title = nil
-    assert_not @listing.valid?
-  end
+  #test "title should be present" do 
+    #@listing.title = nil
+    #assert_not @listing.valid?
+  #end
 
   test "title should be at most 140 characters" do
     @listing.title = "a" * 141
